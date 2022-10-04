@@ -1,21 +1,17 @@
 
-#Script for Utf 3
-# We will use the following packages for the assignment: 
+#Mappeoppgave 3.1.2
 
-library(OECD)   #The OECD package
-library(ggplot2)     # the ggplot package
-library(tidyverse)  # the tidyverse package
-library(dplyr)  # The DPLYR package
-library(ggrepel) # The ggrepel package
+library(OECD)   
+library(ggplot2)     
+library(tidyverse)  
+library(dplyr) 
+library(ggrepel) 
 
-#We want to create a graph that shows the correlation between minimum wages and unemployment. We need to search the OECD data frame for data on these topics.
-#Search data set for minimum wages and unemployment statistics
+
 dsets<-get_datasets()
 search_dataset("wage",dsets)
 search_dataset("unemployment",dsets)
 
-#Data on minimum wages is available in "MIN2AVE"
-#Data on unemployment is available in "MIG_NUP_RATES_GENDER"
 
 #MinWage
 minwage <- get_dataset("MIN2AVE",
